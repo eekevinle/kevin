@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
 
 /* scrollbar */
 @layer utilities {
@@ -21,7 +21,7 @@
 }
 
 html {
-	font-family: 'Karla';
+	font-family: 'Inter';
 	color: white;
 	@apply bg-neutral-900;
 }
