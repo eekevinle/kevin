@@ -4,10 +4,10 @@
 
 	let sections = [
 		'firefighter search & rescue',
-		'voice communications',
-		'wearable surface measurement',
-		'firefighter fall detection',
-		'expert knowledge database'
+		'first responder voice communications',
+		'firefighter display improvements',
+		'ai expert knowledge database',
+		'wearable surface measurement'
 	];
 </script>
 
@@ -32,11 +32,24 @@
 				</div>
 			</div>
 
+			<!-- video -->
+			<div class="video-container">
+				<div class="video-foreground">
+					<iframe
+						title="msa reel"
+						src="https://www.youtube.com/embed/kDoJEgIuYvU?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1"
+						frameBorder="0"
+						allowFullScreen
+					>
+					</iframe>
+				</div>
+			</div>
+
 			<!-- sample sections -->
 			{#each sections as section}
 				<div
 					class="w-full flex justify-center items-center h-96
-							   border-y-[1px] border-neutral-800 text-neutral-800"
+							   border-b-[1px] border-neutral-800 text-neutral-800"
 				>
 					{section}
 				</div>
@@ -46,3 +59,34 @@
 
 	<Fab />
 </div>
+
+<style>
+	.video-container {
+		width: 100vw;
+		height: 400px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.video-container iframe {
+		pointer-events: none;
+	}
+	.video-container iframe {
+		position: absolute;
+		top: -60px;
+		left: 0;
+		width: 100%;
+		height: calc(100% + 120px);
+	}
+	.video-foreground {
+		pointer-events: none;
+	}
+</style>

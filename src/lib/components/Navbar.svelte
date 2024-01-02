@@ -21,7 +21,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </svelte:head>
 
-<nav class="text-white p-4 fixed w-full top-0 z-10">
+<nav class="text-white p-4 fixed w-full top-0 z-10 bg-opacity-50 backdrop-filter backdrop-blur-lg">
 	<div class="container mx-auto flex justify-between items-center">
 		<!-- Logo -->
 		<div class="text-2xl font-black">kl.</div>
