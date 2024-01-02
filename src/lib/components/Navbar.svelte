@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { cubicOut } from 'svelte/easing';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import { faCompassDrafting } from '@fortawesome/free-solid-svg-icons';
 
 	let isMenuOpen = false;
-	const menuItems = ['Work', 'Contact'];
+	const menuItems = ['Resume', 'Contact'];
 
 	function slideRight(node: Element, { delay = 0, duration = 400, easing = cubicOut } = {}) {
 		return {
@@ -24,7 +26,10 @@
 <nav class="text-white p-4 fixed w-full top-0 z-10 bg-opacity-50 backdrop-filter backdrop-blur-lg">
 	<div class="container mx-auto flex justify-between items-center">
 		<!-- Logo -->
-		<div class="text-2xl font-black">kl.</div>
+		<div class="flex justify-center items-center gap-4 text-2xl font-black">
+			<FontAwesomeIcon icon={faCompassDrafting} class="text-2xl" />
+			<div>kl.</div>
+		</div>
 
 		<!-- Menu for large screens -->
 		<ul class="hidden md:flex space-x-4">
