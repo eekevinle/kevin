@@ -1,6 +1,25 @@
-<script>
+<script lang="ts">
+	import { cubicOut } from 'svelte/easing';
+
 	let isMenuOpen = false;
+	const menuItems = ['Work', 'Contact'];
+
+	function slideRight(node: Element, { delay = 0, duration = 400, easing = cubicOut } = {}) {
+		return {
+			delay,
+			duration,
+			easing,
+			css: (t: number) => `
+        transform: translateX(${(1 - t) * 100}%);
+        transition: transform ${duration}ms ${easing};
+      `
+		};
+	}
 </script>
+
+<svelte:head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</svelte:head>
 
 <nav class="text-white p-4 fixed w-full top-0 z-10">
 	<div class="container mx-auto flex justify-between items-center">
@@ -9,8 +28,9 @@
 
 		<!-- Menu for large screens -->
 		<ul class="hidden md:flex space-x-4">
-			<li>work</li>
-			<li>contact</li>
+			{#each menuItems as item}
+				<li>{item}</li>
+			{/each}
 		</ul>
 
 		<!-- Hamburger Icon for small screens -->
@@ -34,28 +54,20 @@
 
 	<!-- Mobile Menu -->
 	{#if isMenuOpen}
-		<div class="md:hidden fixed inset-0 bg-black">
+		<div
+			class="md:hidden fixed inset-0 bg-black"
+			in:slideRight={{ duration: 300 }}
+			out:slideRight={{ duration: 300 }}
+		>
 			<ul class="flex flex-col items-center pt-8">
-				<li class="mb-2">work</li>
-				<li class="mb-2">contact</li>
+				{#each menuItems as item}
+					<li class="mb-2">{item}</li>
+				{/each}
 			</ul>
 
 			<!-- Close Button -->
-			<button class="absolute top-4 right-4" on:click={() => (isMenuOpen = false)}>
-				<svg
-					class="w-6 h-6 text-white"
-					fill="none"
-					stroke="currentColor"
-					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M6 18L18 6M6 6l12 12"
-					></path>
-				</svg>
+			<button class="absolute top-4 right-4 text-white" on:click={() => (isMenuOpen = false)}>
+				<span class="material-icons">close</span>
 			</button>
 		</div>
 	{/if}
