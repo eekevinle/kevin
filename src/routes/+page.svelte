@@ -1,26 +1,19 @@
 <script>
-	import Card from '$lib/components/Card.svelte';
+	import Fab from '$lib/components/Fab.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
-
-	let count = 0;
-	const on_btn_blick = () => {
-		count++;
-	};
 </script>
 
-<!-- screen -->
-<div class="absolute inset-0 flex flex-col overflow-x-hidden bg-black">
+<div class="flex flex-col h-screen overflow-hidden bg-black">
 	<Navbar />
 
-	<!-- main container, centered -->
-	<div class="m-8 flex flex-col gap-8 items-center">
-		<div class="fixed bottom-4 right-4 p-2">
-			<button
-				class="bg-white hover:bg-blue-700 hover:text-white text-black font-bold py-2 px-4 rounded-full"
-			>
-				<!-- Icon or text for the button -->
-				Let's Talk
-			</button>
+	<div class="flex-1 overflow-y-auto pt-16 hide-scrollbar">
+		<div class="min-h-full flex flex-col justify-center items-center">
+			<div class="w-full flex justify-center items-center h-96 bg-red-500">section</div>
+			<div class="w-full flex justify-center items-center h-96 bg-orange-500">section</div>
+			<div class="w-full flex justify-center items-center h-96 bg-green-500">section</div>
+			<div class="w-full flex justify-center items-center h-96 bg-blue-500">section</div>
 		</div>
 	</div>
+
+	<Fab />
 </div>
