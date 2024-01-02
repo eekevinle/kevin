@@ -9,11 +9,11 @@
 </script>
 
 <!-- screen -->
-<div class="absolute inset-0 flex overflow-x-hidden bg-black">
+<div class="absolute inset-0 flex flex-col overflow-x-hidden bg-black">
 	<Navbar />
 
 	<!-- main container, centered -->
-	<div class="w-full m-8 flex flex-col gap-8 justify-center items-center">
+	<div class="m-8 flex flex-col gap-8 items-center">
 		<Card>
 			<div class="flex flex-col gap-2">
 				<div class="font-bold text-3xl">
