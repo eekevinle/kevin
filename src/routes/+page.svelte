@@ -6,8 +6,8 @@
 </script>
 
 <!-- screen -->
-<div class="bg-black h-[100vh]">
-	<!-- main container -->
+<div class="absolute inset-0 overflow-x-hidden w-full h-[100vh] bg-black">
+	<!-- content container -->
 	<div class="h-full flex flex-col justify-center place-items-center">
 		<div class="text-9xl font-black">{count}</div>
 		<button
