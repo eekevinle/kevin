@@ -14,24 +14,13 @@
 
 	<!-- main container, centered -->
 	<div class="m-8 flex flex-col gap-8 items-center">
-		<Card>
-			<div class="flex flex-col gap-2">
-				<div class="font-bold text-3xl">
-					I’m a versatile product engineer focused on UX excellence for safety and communications
-					technologies.
-				</div>
-				<div class="text-neutral-500">
-					I have developed highly effective techniques to bring connected systems to life and to
-					users quickly in order to provide actionable insights to engineering teams through field
-					research data.
-				</div>
-				<br />
-				<div><b>Want to work together to drive your product to success?</b></div>
-				<div class="flex gap-6">
-					<button class="font-bold">My Work</button>
-					<button class="bg-white text-black px-4 py-2 font-bold">Let's Talk</button>
-				</div>
-			</div>
-		</Card>
+		<div class="fixed bottom-4 right-4 p-2">
+			<button
+				class="bg-white hover:bg-blue-700 hover:text-white text-black font-bold py-2 px-4 rounded-full"
+			>
+				<!-- Icon or text for the button -->
+				Let's Talk
+			</button>
+		</div>
 	</div>
 </div>
