@@ -4,7 +4,7 @@
 	import { faCompassDrafting } from '@fortawesome/free-solid-svg-icons';
 
 	let isMenuOpen = false;
-	const menuItems = ['Resume', 'Contact'];
+	const menuItems = ['About', 'Experience', 'Projects'];
 
 	function slideRight(node: Element, { delay = 0, duration = 400, easing = cubicOut } = {}) {
 		return {
@@ -23,16 +23,20 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </svelte:head>
 
-<nav class="text-white p-4 fixed w-full top-0 z-10 bg-opacity-50 backdrop-filter backdrop-blur-lg">
-	<div class="container mx-auto flex justify-between items-center">
+<nav
+	class="px-4 fixed w-full max-w-7xl top-0 z-10
+					 bg-opacity-50 backdrop-filter backdrop-blur-lg
+					 border-b-[1px] border-neutral-900"
+>
+	<div class="flex justify-between items-center">
 		<!-- Logo -->
-		<div class="flex justify-center items-center gap-4 text-2xl font-black">
+		<div class="p-4 flex justify-center items-center gap-4 text-2xl font-black">
 			<FontAwesomeIcon icon={faCompassDrafting} class="text-2xl" />
 			<div>kl.</div>
 		</div>
 
 		<!-- Menu for large screens -->
-		<ul class="hidden md:flex space-x-4">
+		<ul class="hidden w-full text-neutral-500 md:flex md:justify-end space-x-4">
 			{#each menuItems as item}
 				<li>{item}</li>
 			{/each}
@@ -71,7 +75,7 @@
 			</ul>
 
 			<!-- Close Button -->
-			<button class="absolute top-4 right-4 text-white" on:click={() => (isMenuOpen = false)}>
+			<button class="absolute top-4 right-4" on:click={() => (isMenuOpen = false)}>
 				<span class="material-icons">close</span>
 			</button>
 		</div>
