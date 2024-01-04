@@ -13,15 +13,13 @@
 		<Fab />
 		<!-- scrollable content area -->
 		<div
-			class="flex-1 pt-16 flex flex-col md:flex-row overflow-y-scroll hide-scrollbar md:overflow-y-hidden"
+			class="pt-16 flex flex-col md:flex-row overflow-y-scroll hide-scrollbar md:overflow-y-hidden"
 		>
 			<div class="md:h-screen max-w-lg flex flex-col">
 				<Intro />
 				<!-- <About /> -->
 			</div>
-			<div class="md:border-l-[1px] border-neutral-900">
-				<Experience />
-			</div>
+			<Experience />
 		</div>
 	</div>
 </div>
