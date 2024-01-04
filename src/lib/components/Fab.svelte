@@ -2,6 +2,6 @@
 	<button
 		class="bg-white hover:bg-black hover:outline-white hover:text-white text-black font-bold py-2 px-4 rounded-full"
 	>
-		Let's Talk
+		Let's Talk 👋🏽
 	</button>
 </div>
